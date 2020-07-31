@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import NotFoundPage from "../components/NotFoundPage";
 // import Home from "../views/Home.vue";
 import Home from "../components/common/Home";
 import Course from "../components/common/Course";
@@ -14,30 +15,33 @@ const routes = [
         redirect: "/home"
     },
     {
-        path: "/home",
-        name: "/Home",
+        path: '/home',
+        name: 'Home',
         component: Home
     },
     {
         path: "/course",
-        name: "/Course",
+        name: "Course",
         component: Course
     },
     {
         path: "/lightCourse",
-        name: "/LightCourse",
+        name: "LightCourse",
         component: LightCourse
     },
     {
         path: "/micro",
-        name: "/Micro",
+        name: "Micro",
         component: Micro
     },
+    //404 页面,放到最后
+    { path: '*', component: NotFoundPage }
 ];
 
 const router = new VueRouter({
     mode: "history",
     // base: process.env.BASE_URL,
+    linkActiveClass: 'is-active',
     routes
 });
 

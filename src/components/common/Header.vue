@@ -4,14 +4,14 @@
     <el-header height = '80px' style="margin-top: 30px;">
       <div class="header">
         <div class="nav-left">
-          <!--<img src="https://www.luffycity.com/static/img/head-logo.a7cedf3.svg" alt="">-->
+<!--          <img src="/logo.png" alt="">-->
         </div>
         <div class="nav-center">
           <ul style="margin-left: 50px">
             <li v-for="(list, index) in headerList" :key="index">
-              <a href="#">
+              <router-link :to="{name: list.name}">
                 {{ list.title }}
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -27,7 +27,7 @@
 
 <script>
   export default {
-    name: 'LuffyHeader',
+    name: 'Header',
     data() {
       return {
         headerList: [
@@ -42,6 +42,10 @@
   }
 </script>
 <style scoped>
+  .nav-center ul li a.is-active{
+    color: #4a4a4a;
+    border-bottom: 4px solid #ffc210;
+  }
   .nav-center ul li {
     float: left;
     width: 200px;
