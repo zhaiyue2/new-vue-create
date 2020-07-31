@@ -42,17 +42,26 @@
   }
 </script>
 <style scoped>
-  .nav-center ul li a.is-active{
+    .nav-center ul li a.is-active{
     color: #4a4a4a;
     border-bottom: 4px solid #ffc210;
-  }
-  .nav-center ul li {
+    }
+    .nav-center ul li {
     float: left;
     width: 200px;
 
-  }
-  .nav-center ul li a{
+    }
+    .nav-center ul li a{
 
-  }
+    }
 
+    .nav-center {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .nav-right {
+        float: right;
+        margin-right: 50px
+    }
 </style>

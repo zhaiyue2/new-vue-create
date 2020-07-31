@@ -1,5 +1,5 @@
 <template>
-    <el-carousel indicator-position="outside" height="600px">
+    <el-carousel indicator-position="outside" style="width:1200px;margin: 0 auto">
         <el-carousel-item v-for="item in lunboImgs" :key="item.id">
             <img :src="item.imgSrc" alt="">
         </el-carousel-item>
@@ -18,7 +18,7 @@
                     },
                     {
                         id:2,
-                        imgSrc: require('../../assets/common/img/home/banner1.jpg')
+                        imgSrc: require('../../assets/common/img/home/banner2.jpg')
                     },
                     {
                         id:3,
@@ -26,7 +26,7 @@
                     },
                     {
                         id:4,
-                        imgSrc: require('../../assets/common/img/home/banner1.jpg')
+                        imgSrc: require('../../assets/common/img/home/banner2.jpg')
                     }
                 ]
             };
