@@ -1,7 +1,7 @@
 <template>
   <!-- element-ui -->
   <el-container>
-    <el-header height = '80px' style="margin-top: 30px;">
+    <el-header height = '80px' style="width: 1200px;padding-top: 20px;margin: 0 auto">
       <div class="header">
         <div class="nav-left">
 <!--          <img src="/logo.png" alt="">-->
