@@ -11,7 +11,7 @@
             </div>
             <div class="courseList">
                 <ul>
-                    <li style="width: 320px;margin-right: 50px">
+                    <li>
                         <div class="detail">
                             <div class="head">
                                 <img src="" alt="" class="backImg">
@@ -73,19 +73,25 @@
             };
         },
         created() {
-            this.$http.get('') ////发送get请求
+            // this.$http.get('') ////发送get请求
+            this.$http.categoryList()
             .then(res=> {
-                res.data = {};
-                res.data.data = [
-                    {name: "全部"},
+                res = {};
+                res.data = [
                     {name: "Python开发"},
                     {name: "Linux云计算"},
                     {name: "Web前端"},
                     {name: "Java"},
                     {name: "Go语言&C语言"}
                 ];
-                if(!res.data.error_no) {
-                    this.categoryList = res.data.data;
+                if(!res.error_no) {//正常返回
+                    this.categoryList = res.data;
+                    let category = {
+                        id: 0,
+                        category: 0,
+                        name: '全部'
+                    }
+                    this.categoryList.unshift(category); //unshift()方法向数组添加一个或多个元素
                 }
             }).catch(error=>{
                 console.log(error)
@@ -97,6 +103,8 @@
 <style scoped>
     .courseList ul li {
         float: left;
-
+        width: 320px;
+        margin-right: 50px;
+        box-shadow: 0 0 16px rgba(82,163,232,.33);
     }
 </style>
