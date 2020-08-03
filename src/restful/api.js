@@ -10,3 +10,8 @@ export const categoryList = () => {
         return res.data;
     })
 }
+
+export const allCourseList = (categoryId) => {
+    // eslint-disable-next-line no-unused-vars
+    return Axios.get(`?sub_category=${categoryId}`).then(res=>res.data)
+}
